@@ -165,13 +165,13 @@ section {
     opacity: 0.9;
 }
 
-#experience {
+.experience {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     margin: 2rem;
 }
 
-#experience h2 {
+.experience h2 {
     font-size: 4rem;
     margin-bottom: 4rem;
     text-align: center;
@@ -181,7 +181,7 @@ section {
     background-clip: text;
 }
 
-#experience h3 {
+.experience h3 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
