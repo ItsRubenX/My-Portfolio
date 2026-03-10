@@ -1,17 +1,12 @@
-const copyrightText = document.getElementsByClassName("copyright");
-const currentYear = new Date().getFullYear();
-
-// Update copyright text with current year
-if (copyrightText && copyrightText.length > 0) {
-    copyrightText[0].textContent = `© ${currentYear} Ruben Harmsen. Alle rechten voorbehouden.`;
-}
-
 // Initiate on DOM load
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('nav a');
     const sections = document.querySelectorAll('section');
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+
+    const copyrightText = document.getElementsByClassName("copyright");
+    const currentYear = new Date().getFullYear();
 
     // Hamburger menu toggle
     hamburger.addEventListener('click', function() {
@@ -55,4 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Update copyright text with current year
+    if (copyrightText && copyrightText.length > 0) {
+        copyrightText[0].textContent = `© ${currentYear} Ruben Harmsen. Alle rechten voorbehouden.`;
+    }
 });
