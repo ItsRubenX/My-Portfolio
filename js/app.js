@@ -8,6 +8,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const copyrightText = document.getElementsByClassName("copyright");
     const currentYear = new Date().getFullYear();
 
+    const ageText = document.getElementsByClassName("about-me-age");
+    const birthDate = new Date(2007, 5, 1); // 1st June 2007 (month is zero-based)
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const hasHadBirthdayThisYear =
+        today.getMonth() > birthDate.getMonth() ||
+        (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+    if (!hasHadBirthdayThisYear) {
+        age -= 1;
+    }
+
+    // Update age text
+    if (ageText && ageText.length > 0) {
+        ageText[0].textContent = age;
+    }
+
     // Hamburger menu toggle
     hamburger.addEventListener('click', function() {
         hamburger.classList.toggle('active');
